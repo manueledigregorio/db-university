@@ -14,5 +14,20 @@ WHERE YEAR(`date_of_birth`) = '1990';
 
 7. SELECT COUNT(*) FROM `departments`;
 
-8. SELECT * FROM `teachers` WHERE `phone`IS NULL;
+8. SELECT COUNT(*) FROM `teachers` WHERE `phone`IS NULL;
+
+9. SELECT COUNT(`id`)  AS 'NUMERO_ISCRITTI', YEAR(`enrolment_date`) AS 'ANNI_DI_ISCRIZIONI'
+FROM `students` 
+GROUP BY YEAR(`enrolment_date`);
+
+10. SELECT COUNT(`id`) AS 'NUMBER', `office_address` AS 'OFFICE'
+FROM `teachers` 
+GROUP BY `office_address`;
+
+11. SELECT AVG(`vote`) FROM `exam_student` GROUP BY `exam_id`;
+
+12.SELECT COUNT(`id`) AS 'n_COURS',  `department_id` AS 'DEPARTMENT'
+FROM `degrees` 
+GROUP BY `department_id`
+
 
